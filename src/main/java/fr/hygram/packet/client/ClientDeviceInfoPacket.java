@@ -46,7 +46,7 @@ public class ClientDeviceInfoPacket implements PacketHandler {
     }
 
     @Override
-    public int getId() {
+    public byte getId() {
         return ClientPacketIdentifier.DEVICE_INFO_PACKET;
     }
 }

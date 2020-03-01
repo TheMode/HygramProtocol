@@ -7,9 +7,9 @@ public class ServerPacketIdentifier {
     public static final short OPEN_WINDOW_PACKET = 0x01;
 
     // Used to give the windowId and ask the client to create a framebuffer
-    public static final short CREATE_APPLICATION_PACKET = 0x02;
+    public static final short APPLICATION_CREATE_PACKET = 0x02;
 
-    public static final short DELETE_APPLICATION_PACKET = 0x03;
+    public static final short APPLICATION_DELETE_PACKET = 0x03;
 
     // All data contained in the next framebuffer to render
     // Should also contain a md5 representing the whole FrameDataContainer (all assets it contains)

@@ -6,6 +6,6 @@ public interface PacketHandler {
 
     void read(PacketReader reader, Runnable callback);
 
-    int getId();
+    byte getId();
 
 }

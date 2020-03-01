@@ -18,7 +18,7 @@ public class ServerLoginSuccessPacket implements PacketHandler {
     }
 
     @Override
-    public int getId() {
+    public byte getId() {
         return ServerPacketIdentifier.LOGIN_SUCCESS_PACKET;
     }
 }

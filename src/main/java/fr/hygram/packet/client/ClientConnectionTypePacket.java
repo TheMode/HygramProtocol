@@ -24,7 +24,7 @@ public class ClientConnectionTypePacket implements PacketHandler {
     }
 
     @Override
-    public int getId() {
+    public byte getId() {
         return ClientPacketIdentifier.CONNECTION_TYPE_PACKET;
     }
 }
