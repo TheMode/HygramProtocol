@@ -17,9 +17,11 @@ public class ServerPacketIdentifier {
     public static final short APPLICATION_FRAMEBUFFER_PACKET = 0x04;
 
     // In case of a problem, send all assets md5 to check which wrong is outdated to clear and re-download them
+    // Sent after APPLICATION_ASSET_LIST_REQUEST_PACKET
     public static final short APPLICATION_ASSET_LIST_PACKET = 0x05;
 
     // All missing assets data to update the client
+    // Sent after APPLICATION_ASSET_REQUEST_PACKET
     public static final short APPLICATION_ASSET_DATA_PACKET = 0x06;
 
     public static final short APPLICATION_POSITION_CHANGE_PACKET = 0x07;

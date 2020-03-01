@@ -4,7 +4,18 @@ public class ClientPacketIdentifier {
 
     // Should specify if he connects as a guest or user and give information accordingly (password or joincode)
     public static final byte CONNECTION_TYPE_PACKET = 0x00;
-    public static final byte DEVICE_INFO_PACKET = 0x02;
+    public static final byte DEVICE_INFO_PACKET = 0x01;
+
+    // Client does not have all correct assets, request the list from the server
+    // Sent after APPLICATION_FRAMEBUFFER_PACKET
+    public static final short APPLICATION_ASSET_LIST_REQUEST_PACKET = 0x02;
+
+    // Send all missing files md5
+    // Sent after APPLICATION_ASSET_LIST_PACKET
+    public static final short APPLICATION_ASSET_REQUEST_PACKET = 0x03;
+
+    // Tell the server that all files have been installed successfully
+    public static final short APPLICATION_ASSET_SUCCESS = 0x04;
 
     public static final byte PONG_PACKET = 0x0A;
 
