@@ -5,8 +5,8 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 13
-targetCompatibility = 13
+sourceCompatibility = 11
+targetCompatibility = 11
 
 import org.gradle.internal.os.OperatingSystem
 
