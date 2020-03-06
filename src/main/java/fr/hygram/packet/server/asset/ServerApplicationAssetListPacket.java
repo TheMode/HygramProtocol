@@ -1,4 +1,4 @@
-package fr.hygram.packet.server.application;
+package fr.hygram.packet.server.asset;
 
 import fr.hygram.packet.PacketHandler;
 import fr.hygram.packet.PacketReader;
