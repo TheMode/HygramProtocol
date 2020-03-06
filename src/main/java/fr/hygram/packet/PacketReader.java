@@ -7,6 +7,7 @@ import com.github.simplenet.utility.exposed.consumer.FloatConsumer;
 import com.github.simplenet.utility.exposed.consumer.ShortConsumer;
 import fr.hygram.utils.StringConsumer;
 
+import java.util.function.Consumer;
 import java.util.function.DoubleConsumer;
 import java.util.function.IntConsumer;
 import java.util.function.LongConsumer;
@@ -49,6 +50,10 @@ public class PacketReader {
 
     public void readString(StringConsumer consumer) {
         client.readString(s -> consumer.accept(s));
+    }
+
+    public void readBytes(int size, Consumer<byte[]> consumer) {
+        client.readBytes(size, consumer);
     }
 
 }

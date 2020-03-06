@@ -14,17 +14,21 @@ public class ServerPacketIdentifier {
     // All data contained in the next framebuffer to render
     // Should also contain a md5 representing the whole FrameDataContainer (all assets it contains)
     // Framebuffer data is ignored if files aren't up-to-date
-    public static final short APPLICATION_FRAMEBUFFER_PACKET = 0x04;
+    public static final short FRAME_SPRITE_CREATE_PACKET = 0x04;
+
+    public static final short FRAME_SPRITE_DELETE_PACKET = 0x05;
+
+    public static final short FRAME_SPRITE_EDIT_PACKET = 0x06;
 
     // In case of a problem, send all assets md5 to check which wrong is outdated to clear and re-download them
     // Sent after APPLICATION_ASSET_LIST_REQUEST_PACKET
-    public static final short APPLICATION_ASSET_LIST_PACKET = 0x05;
+    public static final short APPLICATION_ASSET_LIST_PACKET = 0x07;
 
     // All missing assets data to update the client
     // Sent after APPLICATION_ASSET_REQUEST_PACKET
-    public static final short APPLICATION_ASSET_DATA_PACKET = 0x06;
+    public static final short APPLICATION_ASSET_DATA_PACKET = 0x08;
 
-    public static final short APPLICATION_POSITION_CHANGE_PACKET = 0x07;
+    public static final short APPLICATION_POSITION_CHANGE_PACKET = 0x09;
 
     public static final short PING_PACKET = 0x0A;
 
