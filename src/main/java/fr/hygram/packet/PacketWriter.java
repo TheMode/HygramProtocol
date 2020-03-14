@@ -1,6 +1,7 @@
 package fr.hygram.packet;
 
 import com.github.simplenet.packet.Packet;
+import fr.hygram.screen.ClientDevice;
 
 import java.util.UUID;
 import java.util.function.Consumer;
@@ -47,6 +48,15 @@ public class PacketWriter {
 
     public void writeBytes(byte[] bytes) {
         packet.putBytes(bytes);
+    }
+
+    public void writeClientDevice(ClientDevice clientDevice) {
+        writeInt(clientDevice.getScreenWidth());
+        writeInt(clientDevice.getScreenHeight());
+        writeInt(clientDevice.getPhysicalScreenWidth());
+        writeInt(clientDevice.getPhysicalScreenHeight());
+        writeInt(clientDevice.getDeviceType().ordinal());
+        writeInt(clientDevice.getDeviceOrientation().ordinal());
     }
 
     public void write(Consumer<Packet> consumer) {

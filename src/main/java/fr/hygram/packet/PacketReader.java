@@ -5,6 +5,9 @@ import com.github.simplenet.utility.exposed.consumer.BooleanConsumer;
 import com.github.simplenet.utility.exposed.consumer.ByteConsumer;
 import com.github.simplenet.utility.exposed.consumer.FloatConsumer;
 import com.github.simplenet.utility.exposed.consumer.ShortConsumer;
+import fr.hygram.screen.ClientDevice;
+import fr.hygram.screen.DeviceOrientation;
+import fr.hygram.screen.DeviceType;
 import fr.hygram.utils.StringConsumer;
 
 import java.util.function.Consumer;
@@ -50,6 +53,27 @@ public class PacketReader {
 
     public void readString(StringConsumer consumer) {
         client.readString(s -> consumer.accept(s));
+    }
+
+    public void readClientDevice(Consumer<ClientDevice> consumer) {
+        readInteger(screenWidth -> {
+            readInteger(screenHeight -> {
+                readInteger(physicalScreenWidth -> {
+                    readInteger(getPhysicalScreenHeight -> {
+                        readInteger(deviceType -> {
+                            readInteger(deviceOrientation -> {
+                                ClientDevice clientDevice =
+                                        new ClientDevice(screenWidth, screenHeight,
+                                                physicalScreenWidth, getPhysicalScreenHeight,
+                                                DeviceType.values()[deviceType],
+                                                DeviceOrientation.values()[deviceOrientation]);
+                                consumer.accept(clientDevice);
+                            });
+                        });
+                    });
+                });
+            });
+        });
     }
 
     public void readBytes(int size, Consumer<byte[]> consumer) {
