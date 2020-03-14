@@ -52,5 +52,5 @@ dependencies {
 
     compile group: 'com.esotericsoftware', name: 'reflectasm', version: '1.11.9'
     implementation 'com.github.TheMode:HygramAPI:84dd70a990'
-    implementation 'com.github.jhg023:SimpleNet:1.6.3'
+    implementation 'com.github.jhg023:SimpleNet:1.6.5'
 }

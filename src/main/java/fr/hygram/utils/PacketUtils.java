@@ -10,6 +10,7 @@ public class PacketUtils {
         Packet packet = Packet.builder();
         PacketWriter packetWriter = new PacketWriter(packet);
 
+        packet.putByte(packetHandler.getId());
         packetHandler.write(packetWriter);
 
         return packet;
