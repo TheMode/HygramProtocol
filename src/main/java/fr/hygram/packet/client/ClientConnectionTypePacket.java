@@ -11,7 +11,7 @@ public class ClientConnectionTypePacket implements PacketHandler {
     public ConnectionType connectionType;
 
     // Password for user, Joincode for guest
-    private String pass;
+    public String pass;
 
     @Override
     public void write(PacketWriter writer) {
