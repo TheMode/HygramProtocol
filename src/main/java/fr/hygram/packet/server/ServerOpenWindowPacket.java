@@ -21,7 +21,8 @@ public class ServerOpenWindowPacket implements PacketHandler {
     public void read(PacketReader reader, Runnable callback) {
         reader.readString(value -> title = value);
         reader.readInteger(value -> width = value);
-        reader.readInteger(i -> {
+        reader.readInteger(value -> {
+            height = value;
             callback.run();
         });
     }

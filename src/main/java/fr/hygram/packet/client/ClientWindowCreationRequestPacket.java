@@ -14,7 +14,7 @@ public class ClientWindowCreationRequestPacket implements PacketHandler {
 
     @Override
     public void read(PacketReader reader, Runnable callback) {
-
+        callback.run();
     }
 
     @Override
