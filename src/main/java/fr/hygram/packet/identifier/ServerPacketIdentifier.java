@@ -3,8 +3,6 @@ package fr.hygram.packet.identifier;
 public class ServerPacketIdentifier {
 
     public static final short LOGIN_SUCCESS_PACKET = 0x00;
-    // Ask the client to open a window (glfw for example)
-    public static final short OPEN_WINDOW_PACKET = 0x01;
 
     // Used to give the windowId and ask the client to create a FBO
     public static final short APPLICATION_CREATE_PACKET = 0x10;

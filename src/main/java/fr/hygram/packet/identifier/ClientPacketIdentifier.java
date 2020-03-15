@@ -6,8 +6,6 @@ public class ClientPacketIdentifier {
     public static final byte CONNECTION_TYPE_PACKET = 0x00;
     public static final byte DEVICE_INFO_PACKET = 0x01;
 
-    public static final byte WINDOW_CREATION_REQUEST_PACKET = 0x02;
-
     // if the client does not have all correct assets, request the list from the server
     // Sent after APPLICATION_FRAMEBUFFER_PACKET
     public static final short APPLICATION_ASSET_LIST_REQUEST_PACKET = 0x10;
